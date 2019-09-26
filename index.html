@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html style="width: 100%; height: 100%;">
+
+<head>
+    <!--base href="http://127.0.0.1/www.elgiva.com/" /> -->
+    <meta name="Author" content="Elgiva Stephen." />
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="content-type" content="text/html charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat|Jura|Roboto|Open+Sans|Ubuntu" rel="stylesheet">-->
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+</head>
+
+<body style="background-color: #fdfdfd; height: 100%; overflow-x:hidden;">
+
+    <section style="height: 100%; position: fixed; width: 100%;">
+
+
+
+
+        <div class="balanCER">
+
+
+            <section class="loginCont">
+
+                <div class="margiN">
+
+                    <div class="header">
+                        <div class="logoWrapper">
+                            <a href="index.php">
+                                <img src="ariadneImg.png" alt="company_logo" title="Home" />
+                            </a>
+                        </div>
+
+                        <nav class="navBar1">
+                            <div class="menuICOn"></div>
+                            <ul class="navCon" style="float: right; margin-bottom: 15px;">
+                                <li>
+                                    <a href="index.html">
+			   HOME
+			   </a>
+                                </li>
+                                <li>
+                                    <a href="">
+			   HOW IT WORKS
+			   </a>
+                                </li>
+                                <li>
+                                    <a href="">
+			   COURSES
+			   </a>
+                                </li>
+                                <li>
+                                    <a href="">
+			  FAQ
+			   </a>
+                                </li>
+                                <li style="padding-right: 56px;" <a href="">
+                                    CONTACT US
+                                    </a>
+                                </li>
+                                <li style="border: none;padding-right: 36px;">
+                                    <a href="index.php">
+			   LOGIN</a>
+                                </li>
+
+                            </ul>
+                            <p style="clear: both;"></p>
+                        </nav>
+                        <p style="clear: both;"></p>
+                    </div>
+
+
+
+                    <div class="floaT">
+
+                        <div class="regTitle">
+                            Login
+                        </div>
+                        <div class="subregTitle">
+                            Login as a Teacher or Student
+                        </div>
+
+                        <form id="regForm">
+
+                            <!-- <div class="g-signin2 gooGle" data-onsuccess="onSignIn" data-theme="dark"></div> -->
+
+                            <div class="goLe fieldCont">
+                                <ul>
+                                    <li>
+                                        <img src="google.png" />
+                                    </li>
+                                </ul>
+                                <button>Login with Google</button>
+                            </div>
+
+                            <div class="line"> or </div>
+
+
+                            <section class="formField">
+
+                                <div class="fieldCont finalField">
+
+
+                                    <input type="text" name="address" placeholder="Enter Email or Username" tabindex="1" class="inputBox" />
+
+                                    <div class="span" id="nameErr"> </div>
+
+                                </div>
+                            </section>
+
+
+                            <section class="formField">
+
+                                <div class="fieldCont finalField">
+
+
+                                    <input type="password" name="password" placeholder="Password" tabindex="2" class="inputBox" />
+
+                                    <div class="span" id="passErr"> </div>
+
+                                </div>
+                            </section>
+
+                            <section class="formField">
+
+                                <div class="fieldCont finalField">
+
+                                    <select type="text" id="user" name="user" tabindex="3" class="selectBox">
+		  <option></option>
+		  <option value="student">Student</option>
+		  <option value="teacher">Teacher</option>
+		  		  	  
+	       </select>
+
+                                    <div class="span" id="stuErr"> </div>
+
+                                </div>
+                            </section>
+
+                            <div class="teXt">
+                                <a href="">
+                                    <p>
+                                        Forgot Password?
+                                    </p>
+                                </a>
+                            </div>
+
+                            <div class="regSumitButt">
+                                <button type="submit" tabindex="4">
+                    Login
+                 </button>
+                            </div>
+
+                            <div class="teXt">
+                                Don't have an account?
+                                <a href="">Sign Up</a>
+                            </div>
+
+                        </form>
+
+
+
+                    </div>
+
+            </section>
+
+
+
+
+            </div>
+
+    </section>
+
+    <script>
+        function onSignIn(googleUser) {
+            // Useful data for your client-side scripts:
+            var profile = googleUser.getBasicProfile();
+            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+            console.log('Full Name: ' + profile.getName());
+            console.log('Given Name: ' + profile.getGivenName());
+            console.log('Family Name: ' + profile.getFamilyName());
+            console.log("Image URL: " + profile.getImageUrl());
+            console.log("Email: " + profile.getEmail());
+
+            // The ID token you need to pass to your backend:
+            var id_token = googleUser.getAuthResponse().id_token;
+            console.log("ID Token: " + id_token);
+        }
+    </script>
+
+
+</body>
+
+</html>
